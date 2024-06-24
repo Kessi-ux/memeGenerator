@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggler {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggler--light, .toggle-dark {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.toggler--slider {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggler-slider--circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: left 0.3s ease;
+}
+
+.toggler--slider.active {
+  background-color: #333;
+}
+
+
+
+.toggler--slider.active .toggler-slider--circle {
+  left: calc(100% - 22px); /* 50px (container width) - 20px (circle width) - 2px (padding) */
+}
+
+.container {
+  padding: 20px;
+}
+
+nav.dark{
+  background-color: #333;
+}
+
+ 
