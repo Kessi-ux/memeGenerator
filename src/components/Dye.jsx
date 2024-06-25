@@ -20,9 +20,10 @@ export const Dye = (props) => {
 
 export const Button = (props) => {
   return (
-  <button className="roll-dice rounded bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 shadow-lg transition duration-300"
+  <button 
+          className="roll-dice rounded bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 shadow-lg transition duration-300"
           onClick={props.onClick}>
-    Roll
+          {props.text}
   </button>
   )
 }
